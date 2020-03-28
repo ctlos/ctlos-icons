@@ -1,0 +1,17 @@
+# Maintainer: Alex Creio <creio@tuta.io>
+
+pkgname=ui-ico
+pkgver=1.0
+pkgrel=1
+pkgdesc="A Combination of Suru++ and Papirus Icons for use in Ctlos"
+url="https://github.com/ctlos/ctlos-icons"
+arch=('x86_64')
+groups=('ctlos')
+source=("git+$url.git")
+sha256sums=('SKIP')
+
+package() {
+  cd ctlos-icons/ui-ico/ || return
+  mkdir -p "${pkgdir}/usr/share/icons"
+  cp -rf *-ico "${pkgdir}/usr/share/icons/"
+}
