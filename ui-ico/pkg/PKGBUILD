@@ -7,6 +7,7 @@ pkgdesc="A Combination of Suru++ and Papirus Icons for use in Ctlos"
 url="https://github.com/ctlos/ctlos-icons"
 arch=('x86_64')
 groups=('ctlos')
+depends=('papirus-icon-theme')
 source=("git+$url.git")
 sha256sums=('SKIP')
 
